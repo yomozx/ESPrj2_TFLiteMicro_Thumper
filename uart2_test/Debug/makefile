@@ -79,8 +79,8 @@ all: main-build
 main-build: uart2_test.elf secondary-outputs
 
 # Tool invocations
-uart2_test.elf: $(OBJS) $(USER_OBJS) D:\Embedded\CubeIDEProjects\uart2_test\STM32L432KCUX_FLASH.ld
-	arm-none-eabi-g++ -o "uart2_test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Embedded\CubeIDEProjects\uart2_test\STM32L432KCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="uart2_test.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+uart2_test.elf: $(OBJS) $(USER_OBJS) D:\Media\Git\Repos\ESPrj2_TFLiteMicro_Thumper\uart2_test\STM32L432KCUX_FLASH.ld
+	arm-none-eabi-g++ -o "uart2_test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Media\Git\Repos\ESPrj2_TFLiteMicro_Thumper\uart2_test\STM32L432KCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="uart2_test.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -181,7 +181,7 @@ int main(void)
        // Fill input buffer (use test value)
        for (uint32_t i = 0; i < num_elements; i++)
        {
-         model_input->data.f[i] = 2.0f;
+         model_input->data.f[i] = 0.0f;
        }
 
        // Get current timestamp
